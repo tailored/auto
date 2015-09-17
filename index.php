@@ -34,6 +34,9 @@
 
 	<!-- Import Custom Responsive Styles -->
 	<link href="assets/css/responsive.css" rel="stylesheet">
+  
+<!--	<link href="bower_components/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet"> -->
+
 
 	
 	<!--[if IE]>
@@ -171,22 +174,7 @@
       <div class="container">
       
       <?php include('car.php') ?>
-      
-      
-      
-        <form action="email.php" method="post" id="myForm" class="message-form">
-          <div class="row">
-            <div class="col-sm-6">
-              <input id="author" class="form-control" name="author" type="text" value="" size="30" aria-required="true" placeholder="Name*" title="Name" required>
-              <input id="email" class="form-control" name="email" type="email" value="" size="30" aria-required="true" placeholder="Email*" title="Email"  required>
-              <input id="subject" class="form-control" name="subject" type="subject" value="" size="30" aria-required="true" placeholder="Subject*" title="Subject"  required>
-            </div>
-            <div class="col-sm-6">
-              <textarea id="message" class="form-control" name="message" cols="45" rows="3" aria-required="true" placeholder="Message" title="Message"  required></textarea>
-              <button name="submit" class="btn btn-lg full-width" type="submit" id="submit">Submit</button>
-            </div>
-          </div><!-- /.row -->
-        </form><!-- /#commentform -->
+        
       </div><!-- /.container -->
     </div><!-- /.message-details -->
   </div><!-- /.contact-area -->
@@ -361,6 +349,11 @@
 
 <!--<script type="text/javascript" src="assets/js/jquery.ajaxchimp.min.js"></script> -->
 
+<script src="bower_components/jquery/dist/jquery.min.js"> </script>
+<script src="bower_components/jquery-validation/dist/jquery.validate.min.js"> </script>
+
+<script src="assets/js/bootstrap.min.js"></script>
+<!--<script src="bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script> -->
 
 
 
@@ -368,6 +361,46 @@
 
  $(document).ready(function() {
 
+   //$('.selectpicker').selectpicker();
+  
+  
+            // Handler for .ready() called.
+            //$("#rest").hide();
+            
+            $("#carform").validate();
+            
+            $.validator.addMethod("selectpicker", function(value, element) 
+            {
+              
+              return !this.optional(element);
+              
+              // && !this.optional($(element).parent().prev().children("select")[0])
+              
+			      var $element = $(element)
+            
+              console.log("v=" + value);
+            
+              if( value.match(/(Select)+/g))
+                return !this.optional(element);
+
+    				 /*function match(index) 
+              {
+                
+    					return current == index && $(element).parents("#sf" + (index + 1)).length;
+    			    }
+    			   
+              if (match(0) || match(1) || match(2)) 
+              {
+    				   return !this.optional(element);
+    			    }*/
+              
+              console.log("v=" + "failed");
+    			   
+              return "dependency-mismatch";
+		       }, $.validator.messages.required)
+    
+    
+ 
   /* -------- One page Navigation ----------*/
 /*  $('#main-menu #menu').onePageNav({
     currentClass: 'active',

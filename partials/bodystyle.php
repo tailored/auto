@@ -1,4 +1,4 @@
-    <select name="ctl00$Wizard1$nBodyStyle" id="ctl00_Wizard1_nBodyStyle" style="width:130px;font-size: medium">
+    <select name="BodyStyle" id="BodyStyle" class="selectpicker">
     <option selected="selected" value="Select Body Style">Select Body Style</option>
     <option value="2 Door Coupe">2 Door Coupe</option>
     <option value="3 Door Hatchback">3 Door Hatchback</option>
