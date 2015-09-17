@@ -1,12 +1,8 @@
-
-
-    
-    
-    
     <script language="javascript">
         var arr = new Array();
         arr[0] = new Array("Select Make");
         
+        arr['Hyundai'] = new Array("Select Model","i10","i20","Verna","Tamil Nadu");
         arr['India'] = new Array("Select Model","Maharashtra","Karnataka","Andhra Pradesh","Tamil Nadu");
         arr['Aust'] = new Array("Select Model","Carinthia"," Styria");
         arr['Usa'] = new Array("Select Model","Florida","New York","Maryland");
@@ -59,14 +55,14 @@
         <table border="1" class="table table-bordered">
             
             <tr>
-                <td colspan="2" style="text-align: center">All fields with an X are required</td>
+                <td colspan="2" style="text-align: center">All fields with an * are required</td>
             </tr>
             <tr>
-                <td width="25%">Year:</td>
+                <td width="25%">Year</td>
                 <td> <?php include('partials/year.php') ?> </td>
             </tr>
             <tr>
-                <td>Make:</td>
+                <td>Make</td>
                 <td >
                     <select name="Make" onchange="change(this,'Model',arr);" class="selectpicker">
                         <option value="0">Select Make</option>
@@ -80,7 +76,7 @@
             </tr>
             
             <tr>
-                <td>Model:</td>
+                <td>Model</td>
                 <td>
                     <select name="Model" onchange="changeModel(this);"></select>
                 </td>
@@ -103,33 +99,33 @@
                 
                 
                 <tr>
-                    <td width="25%">Part:</td>
+                    <td width="25%">Part*</td>
                     <td> <?php include('partials/part.php') ?> </td>
                 </tr>
                 
                 <tr>
-                    <td>Body Style: </td>
+                    <td>Body Style* </td>
                     <td><?php include('partials/bodystyle.php') ?> </td>
                 </tr>
                 
                 <tr>
-                    <td>Vin#:</td>
+                    <td>Vin#</td>
                     <td><input name="Vin" id="Vin" type="text"></td>
                 </tr>
                 
                 <tr>
-                    <td> Extra Details: (if Needed) </td>
-                    <td> <textarea name=ExtraDetails" rows="2" cols="20" id="ExtraDetails"></textarea> </td>
+                    <td> Extra Details (if Needed) </td>
+                    <td> <textarea name=ExtraDetails" rows="2" cols="20" id="ExtraDetails" ></textarea> </td>
                 </tr>
                 
                 <tr>
-                    <td> Engine Liter:</td>
+                    <td> Engine Liter</td>
                     <td><?php include('partials/engineliter.php') ?> </td>
                 </tr>
                 <tr>
-                    <td>Engine Size:</td>
+                    <td>Engine Size*</td>
                     <td>
-                        <select name="EngineSize" id="EngineSize" required class="selectpicker">
+                        <select name="EngineSize" id="EngineSize" class="selectpicker">
                             <option selected="selected" value="">Select Engine Size</option>
                             <option value="3 cylinders">3 cylinders</option>
                             <option value="4 cylinders">4 cylinders</option>
@@ -147,7 +143,7 @@
                 <tr>
                     <td>Turbo-Charged</td>
                     <td>
-                        <select name="TCEngine" id="TCEngine" class="selectpicker" >
+                        <select name="TCEngine" id="TCEngine"  >
                             <option selected="selected" value="N/A">N/A</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
@@ -156,10 +152,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td> Fuel Type:</td>
+                    <td> Fuel Type</td>
                     <td>
-                        <select name="FuelType" id="FuelType" class="selectpicker">
-                            <option selected="selected" value="Select Fuel Type ">Select Fuel Type </option>
+                        <select name="FuelType" id="FuelType" >
+                            <option selected="selected" value="Select Fuel Type">Select Fuel Type </option>
                             <option value="Gasoline">Gasoline</option>
                             <option value="Diesel">Diesel</option>
                             <option value="Propane">Propane</option>
@@ -172,10 +168,10 @@
                 </tr>
                 <tr>
                     <td>
-                    Transmission Type:</td>
+                    Transmission Type</td>
                     <td>
-                        <select name="TransmissionType" id="TransmissionType" class="selectpicker" required>
-                            <option selected="selected" value="Select Transmission Type">Select Transmission Type</option>
+                        <select name="TransmissionType" id="TransmissionType" class="selectpicker"
+                            <option selected="selected" value="">Select Transmission Type</option>
                             <option value="2 Wheel Drive Automatic">2 Wheel Drive Automatic</option>
                             <option value="2 Wheel Drive Manual">2 Wheel Drive Manual</option>
                             <option value="4 Wheel Drive Automatic">4 Wheel Drive Automatic</option>
@@ -194,37 +190,37 @@
                 </tr>
                 
                 <tr>
-                    <td style="" width="62"> Name:</td>
+                    <td style="" width="62"> Name*</td>
                     <td><input name="Name" type="text" required></td>
                     
                 </tr>
                 <tr>
-                    <td >Address:</td>
-                    <td ><input name="Address" id="Address"  type="text"></td>
+                    <td >Address</td>
+                    <td ><input name="Address" id="Address"  type="text" ></td>
                     
                 </tr>
                 <tr>
-                    <td > City:</td>
+                    <td > City</td>
                     <td ><input name="City" id="City" type="text"></td>
                     
                 </tr>
                 <tr>
-                    <td>State/Province:</td>
+                    <td>State/Province</td>
                     <td><?php include('partials/state.php') ?> </td>
                     
                 </tr>
                 <tr>
-                    <td>Zip/Mail Code:</td>
+                    <td>Zip/Mail Code*</td>
                     <td><input name="Zip" id="Zip" type="text" required></td>
                     
                 </tr>
                 <tr>
-                    <td>Phone#:</td>
+                    <td>Phone#*</td>
                     <td><input name="Phone" id="Phone"  type="text" required></td>
                     
                 </tr>
                 <tr>
-                    <td >Email:</td>
+                    <td >Email*</td>
                     <td ><input name="Email" id="Email" type="text" required></td>
                 </tr>
                 
@@ -233,7 +229,7 @@
                     <td>
                     </td>
                     <td>
-                        <input name="Tos" type="checkbox">  I Agree To The Terms of Services Of This Site
+                       <label> <input name="Tos" type="checkbox" required>  I Agree To The Terms of Services Of This Site </label>
                     </td>
                     
                 </tr>
@@ -251,3 +247,14 @@
         </tbody></table>    
         
     </form>
+
+    
+
+<div id="info" class="panel panel-info">
+  <div class="panel-body">
+    Thank you
+  </div>
+  <div class="panel-footer">We will contact you soon</div>
+</div>
+
+

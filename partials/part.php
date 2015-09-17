@@ -1,5 +1,5 @@
 <select name="Part" class="selectpicker">
-    <option value="1">Select Part</option>
+    <option value="">Select Part</option>
     <option value="2">A Pillar</option>
     <option value="3">A/C Compressor</option>
     <option value="4">A/C Compressor Clutch Only</option>

@@ -1,5 +1,5 @@
 <select name="Year" id="Year" class="selectpicker">
-    <option value="Year">Year</option>
+    <option value="">Year</option>
     <option selected="selected" value="2017">2017</option>
     <option value="2016">2016</option>
     <option value="2015">2015</option>

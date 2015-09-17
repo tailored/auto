@@ -1,5 +1,5 @@
     <select name="BodyStyle" id="BodyStyle" class="selectpicker">
-    <option selected="selected" value="Select Body Style">Select Body Style</option>
+    <option selected="selected" value="">Select Body Style</option>
     <option value="2 Door Coupe">2 Door Coupe</option>
     <option value="3 Door Hatchback">3 Door Hatchback</option>
     <option value="4 Door Sedan">4 Door Sedan</option>

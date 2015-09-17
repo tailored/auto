@@ -100,9 +100,9 @@ audio {
 	height: auto;
 	border: none;
 }
-input,
+input[type="text"],
 textarea {
-	width: 100%;
+	width: 60%;
 }
 .form-control:focus,
 input:focus,
@@ -115,6 +115,20 @@ button:focus {
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
 
 	outline: 0; 
+}
+
+label.error
+{
+	
+	
+	color: #F00;
+display: inline-block;
+margin-left: 30px;
+}
+
+input[type="text"].error, select.error
+{
+	border:  1px solid red !important;
 }
 
 /* 2.1 - Headings 
@@ -736,12 +750,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 .message-details input,
 .message-details textarea,
+.message-details select,
 .subscribe-section .form-control {
-	border: 1px solid #e9e9e9;
+	border: 1px solid #aaa;
 	border-radius: 2px;
 	box-shadow: none;
 /*	font-size: .875em;*/
-	padding: 10px 20px;
+	padding: 5px 20px;
+	background: #fff;
 /*	margin-bottom: 15px;*/
 }
 .message-details .custom-btn,
