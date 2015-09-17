@@ -1,4 +1,4 @@
-<html>
+
     <h2>ComboBox</h2>
     
     <script src="bower_components/jquery/dist/jquery.min.js"> </script>
@@ -1106,5 +1106,3 @@
         </tbody></table>    
         
     </form>
-    
-</html>
