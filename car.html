@@ -1,7 +1,9 @@
 <html>
     <h2>ComboBox</h2>
     
-    <script src="jquery-2.1.4.min.js"> </script>
+    <script src="bower_components/jquery/dist/jquery.min.js"> </script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"> </script>
+    
     <script language="javascript">
         var arr = new Array();
         arr[0] = new Array("Select Make");
@@ -30,20 +32,23 @@
         }
         
         
+        
         $(function() {
             // Handler for .ready() called.
             $("#rest").hide();
+            
+            $("#carform").validate();
         });
         
         
         
         
     </script>
-    <form name="form" method="post">
+    <form name="form" method="post" id="carform">
         
         <br />
         
-        <table>
+        <table border="1">
             
             <tr>
                 <td colspan="2" style="text-align: center">All fields with an X are required</td>
@@ -204,14 +209,21 @@
         </table>
         
         
-        <table style="text-align:left;" id="rest">
+        <table border="1" id="rest">
             
             <tbody>
                 
                 <tr>
+                    <td  colspan="2">
+                        <h3> Car Information - so we can supply you with a quote</h3>
+                    </td>
+                    
+                </tr>
+                
+                <tr>
                     <td>Part:</td>
                     <td><div>
-                            <select name="ctl00$Wizard1$nPtype" id="ctl00_Wizard1_nPtype" style="width:200px;font-size: medium">
+                            <select name="ctl00$Wizard1$nPtype">
                                 <option value="1">~Select Part</option>
                                 <option value="2">A Pillar</option>
                                 <option value="3">A/C Compressor</option>
@@ -923,213 +935,186 @@
                         </select> <span id="ctl00_Wizard1_labelv" style="color:Red;">X</span>&nbsp;
                     <span id="ctl00_Wizard1_RequiredFieldValidator13" style="color:Red;visibility:hidden;">select transmission</span></td>
                 </tr>
+                
+                
                 <tr>
-                    <td style="">
+                    <td  colspan="2">
+                        <h3> Contact Information - so we can supply you with a quote</h3>
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    <td style="" width="62">
+                        Name:&nbsp;
                     </td>
                     <td>
-                        <br>
-                        <input name="ctl00$Wizard1$Button3" value="Next" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Wizard1$Button3&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_Wizard1_Button3" style="width:55px;font-size: large; font-weight: 700" type="submit">
+                        &nbsp;<input name="ctl00$Wizard1$nName" type="text">
+                        <span id="ctl00_Wizard1_labelj2zvas" style="color:Red;">X</span>
+                        <span id="ctl00_Wizard1_RequiredFieldValidator1" style="color:Red;visibility:hidden;">missing name</span>
+                    </td>
+                    <td>
                     </td>
                 </tr>
-        </tbody></table>
-        
-        <table id="ctl00_Wizard1" style="background-color:#FEF200;border-color:#333333;border-width:2px;border-style:Solid;border-collapse:collapse;position: relative; font-weight: 700;" border="0" cellpadding="0" cellspacing="0">
-            <tbody><tr style="height:100%;">
+                <tr>
+                    <td style="height: 18px">
+                        Address:&nbsp;
+                    </td>
+                    <td style="height: 18px;">
+                    &nbsp;<input name="ctl00$Wizard1$nAddress" id="ctl00_Wizard1_nAddress" style="width:166px;font-size: small" type="text"></td>
+                    <td style=" height: 18px">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 18px">
+                        City:&nbsp;
+                    </td>
+                    <td style="height: 18px;">
+                    &nbsp;<input name="ctl00$Wizard1$nCity" id="ctl00_Wizard1_nCity" style="width:166px;font-size: small" type="text"></td>
+                    <td style="height: 18px">
+                    </td>
+                </tr>
+                <tr>
                     <td>
-                        
-                        
-                        
-                        <table style="text-align:left;">
+                    State/Province:</td>
+                    <td>
+                        &nbsp;<select name="ctl00$Wizard1$nState" id="ctl00_Wizard1_nState" style="width:152px;font-size: medium">
+                            <option value="1">Select State</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IO">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Lousiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="AB">Alberta - Canada</option>
+                            <option value="BC">British Columbia - Canada</option>
+                            <option value="NB">New Brunswick - Canada</option>
+                            <option value="NL">Newfoundland and Labrador - Canada</option>
+                            <option value="ON">Ontario - Canada</option>
+                            <option value="SK">Saskatchewan - Canada</option>
+                            <option value="QC">Quebec - Canada</option>
+                            <option value="CA">Other Not Listed</option>
                             
-                            <tbody><tr>
-                                    <td class="style4" colspan="3" style="text-align: center">
-                                        
-                                        <span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; ">
-                                            <span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 12px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; font-weight: 700;">
-                                                
-                                                Contact Information - so we can supply you with a quote
-                                                <br>
-                                            All fields with an </span></span><span class="Apple-style-span" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; font-weight: 700;">
-                                            <span class="style3" style="border-collapse: separate; font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; ">
-                                                X</span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 12px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; font-weight: 700;"><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; ">
-                                                are required<br>
-                                        </span></span><br>
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="" width="62">
-                                        Name:&nbsp;
-                                    </td>
-                                    <td>
-                                        &nbsp;<input name="ctl00$Wizard1$nName" id="ctl00_Wizard1_nName" style="width: 166px; font-size: small; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: right center;" type="text">
-                                        <span id="ctl00_Wizard1_labelj2zvas" style="color:Red;">X</span>
-                                        <span id="ctl00_Wizard1_RequiredFieldValidator1" style="color:Red;visibility:hidden;">missing name</span>
-                                    </td>
-                                    <td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height: 18px">
-                                        Address:&nbsp;
-                                    </td>
-                                    <td style="height: 18px;">
-                                    &nbsp;<input name="ctl00$Wizard1$nAddress" id="ctl00_Wizard1_nAddress" style="width:166px;font-size: small" type="text"></td>
-                                    <td style=" height: 18px">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height: 18px">
-                                        City:&nbsp;
-                                    </td>
-                                    <td style="height: 18px;">
-                                    &nbsp;<input name="ctl00$Wizard1$nCity" id="ctl00_Wizard1_nCity" style="width:166px;font-size: small" type="text"></td>
-                                    <td style="height: 18px">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                    State/Province:</td>
-                                    <td>
-                                        &nbsp;<select name="ctl00$Wizard1$nState" id="ctl00_Wizard1_nState" style="width:152px;font-size: medium">
-                                            <option value="1">Select State</option>
-                                            <option value="AL">Alabama</option>
-                                            <option value="AK">Alaska</option>
-                                            <option value="AZ">Arizona</option>
-                                            <option value="AR">Arkansas</option>
-                                            <option value="CA">California</option>
-                                            <option value="CO">Colorado</option>
-                                            <option value="CT">Connecticut</option>
-                                            <option value="DE">Delaware</option>
-                                            <option value="DC">District Of Columbia</option>
-                                            <option value="FL">Florida</option>
-                                            <option value="GA">Georgia</option>
-                                            <option value="HI">Hawaii</option>
-                                            <option value="ID">Idaho</option>
-                                            <option value="IL">Illinois</option>
-                                            <option value="IN">Indiana</option>
-                                            <option value="IO">Iowa</option>
-                                            <option value="KS">Kansas</option>
-                                            <option value="KY">Kentucky</option>
-                                            <option value="LA">Lousiana</option>
-                                            <option value="ME">Maine</option>
-                                            <option value="MD">Maryland</option>
-                                            <option value="MA">Massachusetts</option>
-                                            <option value="MI">Michigan</option>
-                                            <option value="MN">Minnesota</option>
-                                            <option value="MO">Missouri</option>
-                                            <option value="MS">Mississippi</option>
-                                            <option value="MT">Montana</option>
-                                            <option value="NE">Nebraska</option>
-                                            <option value="NV">Nevada</option>
-                                            <option value="NH">New Hampshire</option>
-                                            <option value="NJ">New Jersey</option>
-                                            <option value="NM">New Mexico</option>
-                                            <option value="NY">New York</option>
-                                            <option value="NC">North Carolina</option>
-                                            <option value="ND">North Dakota</option>
-                                            <option value="OH">Ohio</option>
-                                            <option value="OK">Oklahoma</option>
-                                            <option value="OR">Oregon</option>
-                                            <option value="PA">Pennsylvania</option>
-                                            <option value="RI">Rhode Island</option>
-                                            <option value="SC">South Carolina</option>
-                                            <option value="SD">South Dakota</option>
-                                            <option value="TN">Tennessee</option>
-                                            <option value="TX">Texas</option>
-                                            <option value="UT">Utah</option>
-                                            <option value="VT">Vermont</option>
-                                            <option value="VA">Virginia</option>
-                                            <option value="WA">Washington</option>
-                                            <option value="WV">West Virginia</option>
-                                            <option value="WI">Wisconsin</option>
-                                            <option value="WY">Wyoming</option>
-                                            <option value="AB">Alberta - Canada</option>
-                                            <option value="BC">British Columbia - Canada</option>
-                                            <option value="NB">New Brunswick - Canada</option>
-                                            <option value="NL">Newfoundland and Labrador - Canada</option>
-                                            <option value="ON">Ontario - Canada</option>
-                                            <option value="SK">Saskatchewan - Canada</option>
-                                            <option value="QC">Quebec - Canada</option>
-                                            <option value="CA">Other Not Listed</option>
-                                            
-                                        </select>
-                                        <span id="ctl00_Wizard1_labelj2b" style="color:Red;">X</span>
-                                        <span id="ctl00_Wizard1_RequiredFieldValidator3" style="color:Red;visibility:hidden;"> select state</span>
-                                    </td>
-                                    <td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height: 18px">
-                                    Zip/Mail Code:</td>
-                                    <td style="height: 18px;">
-                                        &nbsp;<input name="ctl00$Wizard1$nZip" id="ctl00_Wizard1_nZip" style="width:60px;font-size: medium" type="text">   <span id="ctl00_Wizard1_labelj2z" style="color:Red;">X</span>&nbsp;
-                                        
-                                        <span id="ctl00_Wizard1_RequiredFieldValidator4" style="color:Red;visibility:hidden;">missing zip</span>
-                                    </td>
-                                    <td style=" height: 18px">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height: 18px">
-                                    Phone#:</td>
-                                    <td style="height: 18px;">
-                                        &nbsp;<input name="ctl00$Wizard1$nPhone" id="ctl00_Wizard1_nPhone" style="width:140px;font-size: medium" type="text"><span id="ctl00_Wizard1_lannb" style="color:Red;">X</span>
-                                        <span id="ctl00_Wizard1_RequiredFieldValidator44" style="color:Red;visibility:hidden;">missing phone#</span>
-                                    </td>
-                                    <td style="width: 46px; height: 18px">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height: 18px">
-                                    Email:</td>
-                                    <td style="height: 18px;">
-                                        &nbsp;<input name="ctl00$Wizard1$nEmail" id="ctl00_Wizard1_nEmail" style="width:163px;font-size: large" type="text"><span id="ctl00_Wizard1_labelj2zv" style="color:Red;">X</span>&nbsp;
-                                        
-                                        <span id="ctl00_Wizard1_RequiredFieldValidator6" style="color:Red;visibility:hidden;">missing email</span>
-                                        <span id="ctl00_Wizard1_RegularExpressionValidator1" style="color:Red;visibility:hidden;">not a valid email</span>
-                                        <br>
-                                        
-                                    </td>
-                                    <td style="height: 18px">
-                                    </td>
-                                </tr>
-                                
-                                
-                                
-                                
-                                <tr>
-                                    <td colspan="2" style="height: 30px; text-align: center">
-                                        
-                                        
-                                        <br>
-                                        <input id="ctl00_Wizard1_nTos" name="ctl00$Wizard1$nTos" type="checkbox"><label for="ctl00_Wizard1_nTos"> </label> I Agree To The <a id="ctl00_Wizard1_HyperLink1" onclick="window.open('TOS.aspx',null,'status= yes, resizable= yes, scrollbars=yes, toolbar=no,location=no,menubar=no ');" href="javascript:;" style="font-size:10pt;color:blue;">Terms of Services</a> Of This Site<br>&nbsp;
-                                        
-                                        
-                                    </td>
-                                    <td colspan="1" style="width: 46px; height: 30px; text-align: center">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="height: 25px">
-                                    </td>
-                                    <td style="height: 25px; text-align: right; width: 293px;">
-                                        <input name="ctl00$Wizard1$Button2" value="Next" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Wizard1$Button2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_Wizard1_Button2" style="height:35px;font-weight: 700; font-size: large" type="submit">
-                                    </td>
-                                    <td style="width: 46px; height: 25px; text-align: right">
-                                    </td>
-                                </tr>
-                        </tbody></table>
+                        </select>
+                        <span id="ctl00_Wizard1_labelj2b" style="color:Red;">X</span>
+                        <span id="ctl00_Wizard1_RequiredFieldValidator3" style="color:Red;visibility:hidden;"> select state</span>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 18px">
+                    Zip/Mail Code:</td>
+                    <td style="height: 18px;">
+                        &nbsp;<input name="ctl00$Wizard1$nZip" id="ctl00_Wizard1_nZip" style="width:60px;font-size: medium" type="text">   <span id="ctl00_Wizard1_labelj2z" style="color:Red;">X</span>&nbsp;
                         
+                        <span id="ctl00_Wizard1_RequiredFieldValidator4" style="color:Red;visibility:hidden;">missing zip</span>
+                    </td>
+                    <td style=" height: 18px">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 18px">
+                    Phone#:</td>
+                    <td style="height: 18px;">
+                        &nbsp;<input name="ctl00$Wizard1$nPhone" id="ctl00_Wizard1_nPhone" style="width:140px;font-size: medium" type="text"><span id="ctl00_Wizard1_lannb" style="color:Red;">X</span>
+                        <span id="ctl00_Wizard1_RequiredFieldValidator44" style="color:Red;visibility:hidden;">missing phone#</span>
+                    </td>
+                    <td style="width: 46px; height: 18px">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 18px">
+                    Email:</td>
+                    <td style="height: 18px;">
+                        &nbsp;<input name="ctl00$Wizard1$nEmail" id="ctl00_Wizard1_nEmail" style="width:163px;font-size: large" type="text"><span id="ctl00_Wizard1_labelj2zv" style="color:Red;">X</span>&nbsp;
+                        
+                        <span id="ctl00_Wizard1_RequiredFieldValidator6" style="color:Red;visibility:hidden;">missing email</span>
+                        <span id="ctl00_Wizard1_RegularExpressionValidator1" style="color:Red;visibility:hidden;">not a valid email</span>
+                        <br>
+                        
+                    </td>
+                    <td style="height: 18px">
+                    </td>
+                </tr>
+                
+                
+                
+                
+                <tr>
+                    <td colspan="2" style="height: 30px; text-align: center">
+                        
+                        <input name="ctl00$Wizard1$nTos" type="checkbox">
+                        I Agree To The Terms of Services Of This Site
                         
                         
                     </td>
-                    </tr><tr>
+                    
+                </tr>
+                <tr>
+                    <td >
+                    </td>
+                    <td >
+                        <input name="submit" value="Submit" type="submit">
+                    </td>
+                    
+                </tr>
+                <tr>
                     <td align="right">
                         &nbsp;
                     </td>
                 </tr>
+                
+                
+                
+                
+                
+                
         </tbody></table>
         
     </form>
