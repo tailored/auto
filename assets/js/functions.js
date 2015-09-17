@@ -16,10 +16,10 @@
 
 
 
-  jQuery(window).on('scroll', function($){
+/*  jQuery(window).on('scroll', function($){
     "use strict";
 
-    /*------------- Scroll to Top -----------------*/
+    /*------------- Scroll to Top -----------------* /
       // Scroll to top
       if (jQuery(this).scrollTop() > 100) {
         jQuery('#scroll-to-top').fadeIn('slow');
@@ -32,7 +32,7 @@
   $('#scroll-to-top').click(function(){
     $("html,body").animate({ scrollTop: 0 }, 1500);
     return false;
-  });
+  });*/
 
 
   $(function() {
@@ -62,7 +62,7 @@
 
     /*---------------------------------NiceScroll-----------------------------*/
     //Check IE11
-    function IEVersion() {
+/*    function IEVersion() {
       if (!!navigator.userAgent.match(/Trident\/7\./)) {
         return 11;
       }
@@ -83,11 +83,11 @@
         cursorborderradius: 0,
         horizrailenabled: false
       });
-    }
+    }*/
 
     /*------------------------- Portfolio Slider ----------------------------*/
 
-    var itemSlider = $("#portfolio-slider");
+    /*var itemSlider = $("#portfolio-slider");
 
     itemSlider.owlCarousel({
       autoPlay : 3000,
@@ -107,22 +107,22 @@
         responsive: true,
         responsiveRefreshRate : 200,
         responsiveBaseWidth: window
-      });
+      });*/
 
 
  // Custom Navigation 
- $(".post-next").click(function(){
+/* $(".post-next").click(function(){
   itemSlider.trigger('owl.next');
 });
  $(".post-prev").click(function(){
   itemSlider.trigger('owl.prev');
 });
-
+*/
 
 });
 
   /*------------------------------ SmoothScroll (for Mouse Wheel) v1.2.1 ----------------------*/
-  (function ($) {
+  /*(function ($) {
     var defaultOptions = {
       frameRate: 150,
       animationTime: 1200,
@@ -250,3 +250,4 @@ function pulse(a) {
 window.addEventListener("mousewheel", wheel, !1);
 
 })(jQuery);
+*/

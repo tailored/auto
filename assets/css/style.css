@@ -51,7 +51,6 @@ html,
 body {
 	font-family: 'Open Sans', Sans-serif;
 	font-size: 16px;
-	overflow: hidden;
 
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
@@ -264,7 +263,7 @@ h1,h2,h3,h4,h5,h6 {
 	width: 100%;
 	height: 100%;
 	bottom: 5px;
-	padding-top: 10%;
+	padding-top: 40px;
 }
 
 .slider-icon {
@@ -733,16 +732,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 .message-details input,
 .subscribe-section input {
-	padding: 21px 20px !important;
+/*	padding: 21px 20px !important;*/
 }
-.message-details .form-control,
+.message-details input,
 .subscribe-section .form-control {
 	border: 1px solid #e9e9e9;
 	border-radius: 2px;
 	box-shadow: none;
-	font-size: .875em;
-	padding: 20px;
-	margin-bottom: 15px;
+/*	font-size: .875em;*/
+	padding: 10px 20px;
+/*	margin-bottom: 15px;*/
 }
 .message-details .btn,
 .subscribe-section .btn {
