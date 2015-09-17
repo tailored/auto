@@ -250,7 +250,7 @@
 
     
 
-<div id="info1" class="panel panel-info">
+<div id="info" class="panel panel-info">
   <div class="panel-heading">
     Thank you
   </div>
