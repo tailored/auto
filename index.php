@@ -370,7 +370,7 @@
           
           console.log( r );
           
-          alert('Submitted value:' + r);
+          //alert('Submitted value:' + r);
           
           $("#carform").hide();
           $("#info").show("slow");

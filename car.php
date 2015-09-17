@@ -66,7 +66,7 @@
                 <td >
                     <select name="Make" onchange="change(this,'Model',arr);" class="selectpicker">
                         <option value="0">Select Make</option>
-                        <option value="India">India</option>
+                        <option value="Hyundai">Hyundai</option>
                         <option value="Aust">Austria</option>
                         <option value="Usa">USA</option>
                         <option value="Aus">Australia</option>
@@ -250,11 +250,11 @@
 
     
 
-<div id="info" class="panel panel-info">
-  <div class="panel-body">
+<div id="info1" class="panel panel-info">
+  <div class="panel-heading">
     Thank you
   </div>
-  <div class="panel-footer">We will contact you soon</div>
+  <div class="panel-body">We will contact you soon</div>
 </div>
 
 
